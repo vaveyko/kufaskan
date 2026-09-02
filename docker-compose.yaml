@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  bot:
+    image: vaveyko/kufascan:latest
+    container_name: kufar_bot
+    restart: always
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data  # <- Сохраняем БД на диске сервера!
